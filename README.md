@@ -62,8 +62,6 @@ Outputs:
 ```bash
 uvicorn app.main:app --reload
 ```
-
-Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
  
 [![Watch Demo](https://img.shields.io/badge/Watch%20Demo-Click%20Here-blue?style=for-the-badge&logo=google-drive)](https://drive.google.com/file/d/1aB_HJ9GMxly-Se6ng7i4AiY8bHS9znjv/view?usp=sharing)
 
