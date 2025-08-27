@@ -80,7 +80,7 @@ Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## 🧠 Architectural Decisions
 
-![Architecture Flow](app/static/architecture.png)
+![Architecture Flow](app/static/Architecture_Loan_Product_Assistant.jpg)
 
 ### Why FastAPI + HTML/CSS?
 
