@@ -38,7 +38,7 @@ FAISS_DIR=output/faiss_index
 Prepare `seed_urls.txt` (one URL per line), then run:
 
 ```bash
-python scrappe.py
+python scraper.py
 ```
 
 Outputs:
