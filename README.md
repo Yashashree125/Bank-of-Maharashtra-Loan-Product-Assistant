@@ -7,8 +7,8 @@ An AI-powered assistant that answers questions about Bank of Maharashtra loan of
 ### 1) Clone & create a virtual env
 
 ```bash
-git clone <your-repo-url>
-cd loan-assistant
+git clone [<your-repo-url>](https://github.com/Yashashree125/Bank-of-Maharashtra-Loan-Product-Assistant)
+cd Bank-of-Maharashtra-Loan-Product-Assistant
 python -m venv .venv
 # Linux/Mac
 source .venv/bin/activate
