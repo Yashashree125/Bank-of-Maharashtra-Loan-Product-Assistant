@@ -132,10 +132,6 @@ Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
   * Deterministic settings (low temperature) for factual, concise answers constrained to the provided context.
 
-**Prompting**
-
-* System rules enforce: *use only context*, *be concise*, and *return Markdown for readability* (converted to HTML in the UI).
-
 ---
 
 ## 🛠 AI Tools Used
