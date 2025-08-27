@@ -66,7 +66,16 @@ uvicorn app.main:app --reload
 Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
+🛠️ Tech Stack
 
+FastAPI → Backend framework
+LangChain → RAG orchestration (retriever + LLMChain)
+FAISS → Vector database for embeddings
+HuggingFace Transformers → Embeddings model
+Groq LLM → Language model
+Jinja2 + HTML/CSS → Frontend
+Markdown2 → Answer formatting
+---
 
 ## 🧠 Architectural Decisions
 
@@ -77,10 +86,18 @@ Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ### RAG Design
 
-* **Retriever**: FAISS over `sentence-transformers` embeddings for fast semantic search.
-* **Augmentation**: Top‑k chunks concatenated as context for the LLM.
-* **Generator**: Groq‑hosted LLM receives the user question + retrieved context.
-* **Output Formatting**: LLM returns Markdown; we convert to HTML using `markdown2` and render via `{{ answer | safe }}`.
+The **RAG pipeline** is powered by **LangChain**, a framework that helps orchestrate various components of the pipeline. **LangChain** integrates the following:
+
+- **Retriever**: Uses **FAISS** for fast semantic search.
+- **Augmentation**: Concatenates the retrieved chunks and provides them as context to the language model.
+- **Generator**: **Groq LLM** is used to generate answers based on the user query and augmented context.
+
+LangChain simplifies the orchestration of these components into a seamless flow, ensuring efficient query processing and response generation.
+
+### Output Formatting
+
+The response is generated in **Markdown** format, then converted to **HTML** using **markdown2** and rendered on the frontend.
+
 
 ---
 
@@ -100,6 +117,7 @@ Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 * `sentence-transformers` – `all-MiniLM-L6-v2` for fast, competitive sentence embeddings.
 * `faiss-cpu` – high‑performance vector search on CPU.
+* `langchain` - Orchestrates the retrieval, augmentation, and generation steps in the RAG pipeline.
 * `groq` – call the Groq LLM (`openai/gpt-oss-120b`) for answer generation.
 
 ### App & UX
@@ -134,16 +152,6 @@ Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
 
-## 🛠 AI Tools Used
-
-* **FAISS** – vector search engine for chunk retrieval.
-* **SentenceTransformers** – generates embeddings for both queries and chunks.
-* **Groq LLM** – generates answers conditioned on retrieved context.
-* **markdown2** – converts Markdown to HTML for a clean UI.
-* **FastAPI + Jinja2** – backend + templated frontend.
-
----
-
 ## ⚠️ Challenges & Solutions
 
 1. **Dynamic/JS-heavy pages**: Focused on static loan/product pages; filtered links heuristically (`loan|interest|maha-super`).
@@ -157,7 +165,6 @@ Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## 🔭 Potential Improvements
 
-* **Add LangChain** to simplify RAG pipeline (retriever, chain management).
 * **Freshness**: Scheduled scraping (cron) + incremental re‑indexing.
 * **Table‑aware retrieval**: Embed tables separately; optionally serialize as Markdown for better retrievability.
 * **Hybrid search**: Combine keyword + vector search; add metadata filters (product type, date, source page).
