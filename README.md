@@ -4,7 +4,7 @@ An AI-powered assistant that answers questions about Bank of Maharashtra loan of
 
 ## 🚀 Quick Start
 
-### 1) Clone & create a virtual env
+### 1. Clone & create a virtual env
 
 ```bash
 git clone https://github.com/Yashashree125/Bank-of-Maharashtra-Loan-Product-Assistant
@@ -16,13 +16,13 @@ source .venv/bin/activate
 .venv\Scripts\activate
 ```
 
-### 2) Install dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3) Configure environment
+### 3. Configure environment
 
 Create a **.env** file in the project root (do not commit this file):
 
@@ -33,7 +33,7 @@ LLM_MODEL=openai/gpt-oss-120b
 FAISS_DIR=output/faiss_index
 ```
 
-### 4) Scrape pages (optional – if you need fresh data)
+### 4. Scrape pages (optional – if you need fresh data)
 
 Prepare `seed_urls.txt` (one URL per line), then run:
 
