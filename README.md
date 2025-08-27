@@ -66,15 +66,16 @@ uvicorn app.main:app --reload
 Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-FastAPI → Backend framework
-LangChain → RAG orchestration (retriever + LLMChain)
-FAISS → Vector database for embeddings
-HuggingFace Transformers → Embeddings model
-Groq LLM → Language model
-Jinja2 + HTML/CSS → Frontend
-Markdown2 → Answer formatting
+- **FastAPI** → Backend framework
+- **LangChain** → RAG orchestration (retriever + LLMChain)
+- **FAISS** → Vector database for embeddings
+- **HuggingFace Transformers** → Embeddings model
+- **Groq LLM** → Language model
+- **Jinja2 + HTML/CSS** → Frontend
+- **Markdown2** → Answer formatting
+
 ---
 
 ## 🧠 Architectural Decisions
