@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Product Assistant</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bank of Maharashtra - Loan Product Assistant</h1>
+        <form method="post" action="/ask">
+            <input type="text" name="query" placeholder="Ask about a loan..." required>
+            <button type="submit">Ask</button>
+        </form>
+
+        {% if query %}
+            <h2>Question: {{ query }}</h2>
+            <h3>Answer:</h3>
+            <div class="answer">
+                {{ answer | safe }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
