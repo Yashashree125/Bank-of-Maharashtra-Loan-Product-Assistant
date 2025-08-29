@@ -47,7 +47,7 @@ Outputs:
 * `output/tables/` – CSVs extracted from HTML tables
 * `output/loan_data.jsonl` – structured page data
 
-### 5) Chunk the scraped text
+### 5. Chunk the scraped text
 
 ```bash
 python chunking.py
