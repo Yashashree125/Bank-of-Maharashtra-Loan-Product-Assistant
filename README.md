@@ -94,7 +94,7 @@ The **RAG pipeline** is powered by **LangChain**, a framework that helps orchest
 
 - **Retriever**: Uses **FAISS** for fast semantic search.
 - **Augmentation**: Concatenates the retrieved chunks and provides them as context to the language model.
-- **Generator**: **Groq LLM** is used to generate answers based on the user query and augmented context.
+- **Generator**: **gpt/oss** from **Groq** is used to generate answers based on the user query and augmented context.
 
 LangChain simplifies the orchestration of these components into a seamless flow, ensuring efficient query processing and response generation.
 
